@@ -1,0 +1,8 @@
+rules:
+    - SamLitowitz\PHPStan\Rules\Operators\NoTernaryOperationRule
+
+services:
+    -
+        class: SamLitowitz\PHPStan\Operators\NoTernaryOperationRule
+        tags:
+            - phpstan.rules.rule

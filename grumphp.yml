@@ -1,0 +1,27 @@
+parameters:
+  tasks:
+    composer:
+    file_size:
+    phpcs:
+      standard: PSR2
+      whitelist_patterns:
+        - /^src\/(.*)/
+        - /^tests\/src\/[^\/]*\/[^data](.*)/
+    phpcsfixer2:
+    phplint:
+      exclude:
+        - vendor/
+        - tests/src/Operators/data/
+    phpmd:
+      exclude:
+        - vendor/
+        - tests/src/Operators/data/
+    phpmnd:
+      exclude:
+        - vendor/
+        - tests/src/Operators/data/
+    phpstan:
+      configuration: phpstan.neon
+      ignore_patterns:
+        - /^tests\/src\/[^\/]*\/data\/(.*)/
+    phpunit:
